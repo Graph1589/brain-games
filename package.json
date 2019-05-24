@@ -1,7 +1,7 @@
 {
   "name": "bg-graph1589",
-  "version": "1.0.2",
-  "description": "",
+  "version": "1.0.4",
+  "description": "first game added",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
