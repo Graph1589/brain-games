@@ -2,7 +2,7 @@
 
 languge: node_js
 node_js:
-	- node
+	- "10.15.2"
 
 script:
 	- make lint
