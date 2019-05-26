@@ -29,9 +29,9 @@ export default (roundNumber, userName) => {
     default:
       break;
   }
-  const answer = Number(readlineSync.question(`Question: ${firstNumber} ${operatorChar} ${secondNumber} `));
+  const answer = readlineSync.question(`Question: ${firstNumber} ${operatorChar} ${secondNumber} `);
   console.log(`Your answer: ${answer}`);
-  if (answer === rightAnswer) {
+  if (Number(answer) === rightAnswer) {
     console.log('Correct!');
     return true;
   }

@@ -24,10 +24,10 @@ export default (roundNumber, userName) => {
   }
   const firstNumber = getRandomInteger(maxValueOfNumbers);
   const secondNumber = getRandomInteger(maxValueOfNumbers);
-  const answer = Number(readlineSync.question(`Question: ${firstNumber} ${secondNumber} `));
+  const answer = readlineSync.question(`Question: ${firstNumber} ${secondNumber} `);
   console.log(`Your answer: ${answer}`);
   const rightAnswer = findGreatestCommonDivisor(firstNumber, secondNumber);
-  if (answer === rightAnswer) {
+  if (Number(answer) === rightAnswer) {
     console.log('Correct!');
     return true;
   }
