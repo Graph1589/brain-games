@@ -1,7 +1,7 @@
 {
   "name": "bg-graph1589",
-  "version": "1.0.4",
-  "description": "first game added",
+  "version": "1.0.5",
+  "description": "second game added",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -18,7 +18,7 @@
   },
   "bin": {
     "brain-games": "dist/bin/brain-games.js",
-    "brain-even": "dist/bin/brain-even.js"
+    "brain-even": "dist/bin/brain-games.js"
   },
   "files": [
     "dist"

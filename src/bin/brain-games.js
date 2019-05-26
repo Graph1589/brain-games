@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 
-import meeting from '../index';
+import brainGamesEngine from '../index';
 
-console.log('Welcome to the Brain Games!');
-meeting();
+brainGamesEngine();
