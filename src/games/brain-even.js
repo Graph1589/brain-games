@@ -22,5 +22,6 @@ export default (roundNumber, userName) => {
     wrongAnswer(answer, rightAnswer, userName);
     return false;
   }
+  console.log('Correct!');
   return true;
 };
