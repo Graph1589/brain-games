@@ -18,6 +18,7 @@ export default (roundNumber, userName) => {
   }
 
   const answer = readlineSync.question(`Question: ${number} `);
+  console.log(`Your answer: ${answer}`);
   if (answer !== rightAnswer) {
     wrongAnswer(answer, rightAnswer, userName);
     return false;
