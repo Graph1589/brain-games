@@ -2,4 +2,5 @@
 
 import brainGamesEngine from '../index';
 
-brainGamesEngine();
+const key = 'prime';
+brainGamesEngine(key);

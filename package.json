@@ -1,7 +1,7 @@
 {
   "name": "bg-graph1589",
-  "version": "1.0.8",
-  "description": "add 4th game",
+  "version": "1.1.3",
+  "description": "educational project, brain games",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -18,7 +18,11 @@
   },
   "bin": {
     "brain-games": "dist/bin/brain-games.js",
-    "brain-even": "dist/bin/brain-games.js"
+    "brain-even": "dist/bin/brain-even.js",
+    "brain-calc": "dist/bin/brain-calc.js",
+    "brain-progression.js": "dist/bin/brain-calc.js",
+    "brain-gcd": "dist/bin/brain-calc.js",
+    "brain-prime": "dist/bin/brain-prime"
   },
   "files": [
     "dist"
