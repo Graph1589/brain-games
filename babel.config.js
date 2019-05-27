@@ -1,10 +1,10 @@
 module.exports = {
   presets: [
     ['@babel/env',
-     {
-       targets: {
-         node: 'current',
-      },
-    }],
+      {
+        targets: {
+          node: 'current',
+        },
+      }],
   ],
 };
