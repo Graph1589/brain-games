@@ -4,3 +4,5 @@
 [![Build Status](https://travis-ci.org/Graph1589/project-lvl1-s508.svg?branch=master)](https://travis-ci.org/Graph1589/project-lvl1-s508)
 
 # Asciinema
+
+[![asciicast](https://asciinema.org/a/Gs5lUHyLCmblNAv08YkxlpZvA.svg)](https://asciinema.org/a/Gs5lUHyLCmblNAv08YkxlpZvA)
