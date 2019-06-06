@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 
-import brainGamesEngine from '../index';
+import brainGCDStarter from '../games/brain-gcd';
 
-const key = 'gcd';
-brainGamesEngine(key);
+brainGCDStarter();

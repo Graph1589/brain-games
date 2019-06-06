@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 
-import brainGamesEngine from '../index';
+import brainEvenStarter from '../games/brain-even';
 
-const key = 'even';
-brainGamesEngine(key);
+brainEvenStarter();

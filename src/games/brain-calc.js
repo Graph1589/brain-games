@@ -1,40 +1,56 @@
-import readlineSync from 'readline-sync';
 import getRandomInteger from '../utilities/randomizer';
-import wrongAnswer from '../utilities/wrong-answer';
+import engine from '../game-engine';
 
-export default (roundNumber, userName) => {
-  if (roundNumber === 0) {
-    console.log('What is the result of the expression?');
-  }
-  const maxValueForNumber = 35;
-  const maxValueForOperator = 3;
-  const firstNumber = getRandomInteger(maxValueForNumber);
-  const secondNumber = getRandomInteger(maxValueForNumber);
-  const operatorNumber = getRandomInteger(maxValueForOperator);
-  let rightAnswer = 0;
+const numberOfOperators = 3;
+const maxValueOfNumbers = 35;
+
+const getRandomOperator = (number) => {
   let operatorChar = '';
-  switch (operatorNumber) {
+  switch (number) {
     case 1:
       operatorChar = '+';
-      rightAnswer = firstNumber + secondNumber;
       break;
     case 2:
       operatorChar = '-';
-      rightAnswer = firstNumber - secondNumber;
       break;
     case 3:
       operatorChar = '*';
-      rightAnswer = firstNumber * secondNumber;
       break;
     default:
       break;
   }
-  const answer = readlineSync.question(`Question: ${firstNumber} ${operatorChar} ${secondNumber} `);
-  console.log(`Your answer: ${answer}`);
-  if (Number(answer) === rightAnswer) {
-    console.log('Correct!');
-    return true;
+  return operatorChar;
+};
+
+const getRightAnswer = (firstNumber, operator, secondNumber) => {
+  let rightAnswer = 0;
+  switch (operator) {
+    case '+':
+      rightAnswer = firstNumber + secondNumber;
+      break;
+    case '-':
+      rightAnswer = firstNumber - secondNumber;
+      break;
+    case '*':
+      rightAnswer = firstNumber * secondNumber;
+      break;
+    default:
   }
-  wrongAnswer(answer, rightAnswer, userName);
-  return false;
+  return rightAnswer;
+};
+
+const brainCalc = () => {
+  const firstNumber = getRandomInteger(maxValueOfNumbers);
+  const secondNumber = getRandomInteger(maxValueOfNumbers);
+  const operator = getRandomOperator(numberOfOperators);
+  const question = `${firstNumber} ${operator} ${secondNumber}`;
+  const rightAnswer = getRightAnswer(firstNumber, operator, secondNumber);
+  return [question, rightAnswer];
+};
+
+const game = brainCalc;
+const description = 'What is the result of the expression?';
+
+export default () => {
+  engine(game, description);
 };

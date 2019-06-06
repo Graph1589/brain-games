@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 
-import brainGamesEngine from '../index';
+import brainProgressionStarter from '../games/brain-progression';
 
-const key = 'progression';
-brainGamesEngine(key);
+brainProgressionStarter();

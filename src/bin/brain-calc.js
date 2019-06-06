@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 
-import brainGamesEngine from '../index';
+import brainCalcStarter from '../games/brain-calc';
 
-const key = 'calc';
-brainGamesEngine(key);
+brainCalcStarter();

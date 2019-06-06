@@ -1,10 +1,9 @@
-import readlineSync from 'readline-sync';
 import getRandomInteger from '../utilities/randomizer';
-import wrongAnswer from '../utilities/wrong-answer';
+import engine from '../game-engine';
 
-const maxNumber = 300;
+const maxValueOfNumbers = 50;
 
-const isNumberPrime = (num) => {
+const isPrime = (num) => {
   let cdg = 0;
   if (num === 1) {
     return 'no';
@@ -20,18 +19,16 @@ const isNumberPrime = (num) => {
   return 'no';
 };
 
-export default (roundNumber, userName) => {
-  if (roundNumber === 0) {
-    console.log('Answer "yes" if given number is prime. Otherwise answer "no"');
-  }
-  const number = getRandomInteger(maxNumber);
-  const rightAnswer = isNumberPrime(number);
-  const answer = readlineSync.question(`Question: ${number} `);
-  console.log(`Your answer: ${answer}`);
-  if (answer === rightAnswer) {
-    console.log('Correct!');
-    return true;
-  }
-  wrongAnswer(answer, rightAnswer, userName);
-  return false;
+const brainPrime = () => {
+  const number = getRandomInteger(maxValueOfNumbers);
+  const question = `${number}`;
+  const rightAnswer = isPrime(number);
+  return [question, rightAnswer];
+};
+
+const description = 'Answer "yes" if given number is prime. Otherwise answer "no"';
+const game = brainPrime;
+
+export default () => {
+  engine(game, description);
 };

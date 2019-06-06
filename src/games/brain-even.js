@@ -1,28 +1,19 @@
-import readlineSync from 'readline-sync';
 import getRandomInteger from '../utilities/randomizer';
-import wrongAnswer from '../utilities/wrong-answer';
+import engine from '../game-engine';
 
 const maxValueOfNumbers = 100;
 
-export default (roundNumber, userName) => {
-  if (roundNumber === 0) {
-    console.log('Answer "yes" if number even, otherwise answer "no"\n');
-  }
-  const number = getRandomInteger(maxValueOfNumbers);
-  let rightAnswer = '';
+const isEven = number => number % 2 === 0;
 
-  if (number % 2 === 0) {
-    rightAnswer = 'yes';
-  } else {
-    rightAnswer = 'no';
-  }
+const brainEven = () => {
+  const question = getRandomInteger(maxValueOfNumbers);
+  const rightAnswer = isEven(question) ? 'yes' : 'no';
+  return [question, rightAnswer];
+};
 
-  const answer = readlineSync.question(`Question: ${number} `);
-  console.log(`Your answer: ${answer}`);
-  if (answer !== rightAnswer) {
-    wrongAnswer(answer, rightAnswer, userName);
-    return false;
-  }
-  console.log('Correct!');
-  return true;
+const game = brainEven;
+const description = 'Answer "yes" if number even, otherwise answer "no".';
+
+export default () => {
+  engine(game, description);
 };

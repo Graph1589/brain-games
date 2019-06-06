@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 
-import brainGamesEngine from '../index';
+import brainPrimeStarter from '../games/brain-prime';
 
-const key = 'prime';
-brainGamesEngine(key);
+brainPrimeStarter();
