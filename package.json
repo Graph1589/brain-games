@@ -1,6 +1,6 @@
 {
   "name": "bg-graph1589",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "educational project, brain games",
   "keywords": "brain-games",
   "scripts": {
@@ -12,7 +12,6 @@
   "license": "ISC",
   
   "bin": {
-    "brain-games": "dist/bin/brain-games.js",
     "brain-even": "dist/bin/brain-even.js",
     "brain-calc": "dist/bin/brain-calc.js",
     "brain-progression": "dist/bin/brain-progression.js",
