@@ -32,6 +32,6 @@ export default (game, description) => {
       wrongAnswer(userAnswer, rightAnswer, userName);
       return;
     }
-    congratulation(userName);
   }
+  congratulation(userName);
 };
