@@ -7,10 +7,9 @@ const getProgression = (firstNum, step, hidenPosition) => {
   let progression = '';
   for (let i = 0; i < progresLength; i += 1) {
     if (i === hidenPosition) {
-      progression += '.. ';
+      progression = `${progression}...`;
     } else {
-      progression += String(firstNum + i * step);
-      progression += ' ';
+      progression = `${progression}${String(firstNum + i * step)} `;
     }
   }
   return progression;
