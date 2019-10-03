@@ -15,14 +15,12 @@ const getProgression = (firstNum, step, hidenPosition) => {
   return progression;
 };
 
-const getHiddenNumber = (firstNum, step, hidenPosition) => firstNum + hidenPosition * step;
-
 const brainProgression = () => {
   const firstNum = getRandomInteger(100);
   const step = getRandomInteger(20);
   const hidenPosition = getRandomInteger(10);
   const question = getProgression(firstNum, step, hidenPosition);
-  const rightAnswer = getHiddenNumber(firstNum, step, hidenPosition);
+  const rightAnswer = firstNum + hidenPosition * step;
   return [question, rightAnswer];
 };
 
