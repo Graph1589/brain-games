@@ -1,12 +1,5 @@
 import readlineSync from 'readline-sync';
 
-const welcome = () => {
-  console.log('\nWelcome to the Brain games!');
-  const userName = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${userName}!`);
-  return userName;
-};
-
 const wrongAnswer = (wrong, right, userName) => {
   console.log(`"${wrong}" is wrong answer ;(. Correct answer was "${right}".`);
   console.log(`Let's try again, ${userName}!`);
@@ -17,7 +10,9 @@ const congratulation = (userName) => {
 };
 
 export default (game, description) => {
-  const userName = welcome();
+  console.log('\nWelcome to the Brain games!');
+  const userName = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${userName}!`);
   console.log(description);
 
   for (let i = 0; i < 3; i += 1) {
