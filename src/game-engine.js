@@ -1,14 +1,5 @@
 import readlineSync from 'readline-sync';
 
-const wrongAnswer = (wrong, right, userName) => {
-  console.log(`"${wrong}" is wrong answer ;(. Correct answer was "${right}".`);
-  console.log(`Let's try again, ${userName}!`);
-};
-
-const congratulation = (userName) => {
-  console.log(`Congratulations, ${userName}!`);
-};
-
 export default (game, description) => {
   console.log('\nWelcome to the Brain games!');
   const userName = readlineSync.question('May I have your name? ');
@@ -24,9 +15,10 @@ export default (game, description) => {
     if (String(rightAnswer) === userAnswer) {
       console.log('Correct!');
     } else {
-      wrongAnswer(userAnswer, rightAnswer, userName);
+      console.log(`"${userAnswer}" is wrong answer ;(. Correct answer was "${rightAnswer}".`);
+      console.log(`Let's try again, ${userName}!`);
       return;
     }
   }
-  congratulation(userName);
+  console.log(`Congratulations, ${userName}!`);
 };
