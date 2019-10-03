@@ -13,16 +13,13 @@ const isPrime = (num) => {
       cdg = i;
     }
   }
-  if (cdg === 1) {
-    return 'yes';
-  }
-  return 'no';
+  return (cdg === 1);
 };
 
 const brainPrime = () => {
   const number = getRandomInteger(maxValueOfNumbers);
   const question = `${number}`;
-  const rightAnswer = isPrime(number);
+  const rightAnswer = isPrime(number) ? 'yes' : 'no';
   return [question, rightAnswer];
 };
 
