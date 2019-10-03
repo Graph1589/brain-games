@@ -18,7 +18,7 @@ const getProgression = (firstNum, step, hidenPosition) => {
 const brainProgression = () => {
   const firstNum = getRandomInteger(100);
   const step = getRandomInteger(20);
-  const hidenPosition = getRandomInteger(10);
+  const hidenPosition = getRandomInteger(progresLength);
   const question = getProgression(firstNum, step, hidenPosition);
   const rightAnswer = firstNum + hidenPosition * step;
   return [question, rightAnswer];
