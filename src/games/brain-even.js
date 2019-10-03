@@ -1,12 +1,12 @@
 import getRandomInteger from '../utilities/randomizer';
 import engine from '../game-engine';
 
-const maxValueOfNumbers = 100;
+const max = 100;
 
 const isEven = number => number % 2 === 0;
 
 const brainEven = () => {
-  const question = getRandomInteger(maxValueOfNumbers);
+  const question = getRandomInteger(max);
   const rightAnswer = isEven(question) ? 'yes' : 'no';
   return [question, rightAnswer];
 };
