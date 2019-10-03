@@ -9,9 +9,7 @@ export default (play, description) => {
   console.log(description);
 
   for (let i = 0; i < sumOfRound; i += 1) {
-    const message = play();
-    const question = message[0];
-    const rightAnswer = message[1];
+    const [question, rightAnswer] = play();
     console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your Answer: ');
     if (String(rightAnswer) === userAnswer) {
