@@ -5,7 +5,7 @@ const progresLength = 10;
 
 const getProgression = (firstNum, step, hidenPosition) => {
   let progression = '';
-  for (let i = 1; i <= progresLength; i += 1) {
+  for (let i = 0; i < progresLength; i += 1) {
     if (i === hidenPosition) {
       progression += '.. ';
     } else {
