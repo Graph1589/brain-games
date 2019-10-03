@@ -1,26 +1,8 @@
 import getRandomInteger from '../utilities/randomizer';
 import engine from '../game-engine';
 
-const numberOfOperators = 3;
+const operators = ['+', '-', '*'];
 const maxValueOfNumbers = 35;
-
-const getRandomOperator = (number) => {
-  let operatorChar = '';
-  switch (number) {
-    case 1:
-      operatorChar = '+';
-      break;
-    case 2:
-      operatorChar = '-';
-      break;
-    case 3:
-      operatorChar = '*';
-      break;
-    default:
-      break;
-  }
-  return operatorChar;
-};
 
 const getRightAnswer = (firstNumber, operator, secondNumber) => {
   let rightAnswer = 0;
@@ -42,7 +24,7 @@ const getRightAnswer = (firstNumber, operator, secondNumber) => {
 const brainCalc = () => {
   const firstNumber = getRandomInteger(maxValueOfNumbers);
   const secondNumber = getRandomInteger(maxValueOfNumbers);
-  const operator = getRandomOperator(numberOfOperators);
+  const operator = operators[getRandomInteger(operators.length)];
   const question = `${firstNumber} ${operator} ${secondNumber}`;
   const rightAnswer = getRightAnswer(firstNumber, operator, secondNumber);
   return [question, rightAnswer];
