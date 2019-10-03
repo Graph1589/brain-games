@@ -48,9 +48,8 @@ const brainCalc = () => {
   return [question, rightAnswer];
 };
 
-const game = brainCalc;
 const description = 'What is the result of the expression?';
 
 export default () => {
-  engine(game, description);
+  engine(brainCalc, description);
 };

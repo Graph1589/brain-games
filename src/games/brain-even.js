@@ -11,9 +11,8 @@ const brainEven = () => {
   return [question, rightAnswer];
 };
 
-const game = brainEven;
 const description = 'Answer "yes" if number even, otherwise answer "no".';
 
 export default () => {
-  engine(game, description);
+  engine(brainEven, description);
 };

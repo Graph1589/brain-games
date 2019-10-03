@@ -24,8 +24,7 @@ const brainPrime = () => {
 };
 
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no"';
-const game = brainPrime;
 
 export default () => {
-  engine(game, description);
+  engine(brainPrime, description);
 };

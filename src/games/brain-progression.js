@@ -25,8 +25,7 @@ const brainProgression = () => {
 };
 
 const description = 'What number is missing in the progression?';
-const game = brainProgression;
 
 export default () => {
-  engine(game, description);
+  engine(brainProgression, description);
 };

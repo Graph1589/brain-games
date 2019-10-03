@@ -23,8 +23,7 @@ const brainGcd = () => {
 };
 
 const description = 'Find the greatest common divisor of given numbers.';
-const game = brainGcd;
 
 export default () => {
-  engine(game, description);
+  engine(brainGcd, description);
 };
