@@ -24,7 +24,7 @@ const getRightAnswer = (firstNumber, operator, secondNumber) => {
 const brainCalc = () => {
   const firstNumber = getRandomInteger(maxValueOfNumbers);
   const secondNumber = getRandomInteger(maxValueOfNumbers);
-  const operator = operators[getRandomInteger(operators.length)];
+  const operator = operators[getRandomInteger(operators.length, 0)];
   const question = `${firstNumber} ${operator} ${secondNumber}`;
   const rightAnswer = getRightAnswer(firstNumber, operator, secondNumber);
   return [question, rightAnswer];
