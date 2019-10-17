@@ -22,11 +22,11 @@ const getRightAnswer = (firstNumber, operator, secondNumber) => {
 };
 
 const brainCalc = () => {
-  const firstNumber = getRandomInteger(maxValue);
-  const secondNumber = getRandomInteger(maxValue);
+  const firstOperand = getRandomInteger(maxValue);
+  const secondOperand = getRandomInteger(maxValue);
   const operator = operators[getRandomInteger(operators.length, 0)];
-  const question = `${firstNumber} ${operator} ${secondNumber}`;
-  const rightAnswer = getRightAnswer(firstNumber, operator, secondNumber);
+  const question = `${firstOperand} ${operator} ${secondOperand}`;
+  const rightAnswer = getRightAnswer(firstOperand, operator, secondOperand);
   return [question, rightAnswer];
 };
 
