@@ -3,7 +3,7 @@ import engine from '../game-engine';
 
 const progresLength = 10;
 
-const getProgression = (firstNum, step, hidenPosition) => {
+const getQuestion = (firstNum, step, hidenPosition) => {
   let progression = '';
   for (let i = 0; i < progresLength; i += 1) {
     if (i === hidenPosition) {
@@ -19,7 +19,7 @@ const runProgression = () => {
   const firstNum = getRandomInteger(100);
   const step = getRandomInteger(20);
   const hidenPosition = getRandomInteger(progresLength);
-  const question = getProgression(firstNum, step, hidenPosition);
+  const question = getQuestion(firstNum, step, hidenPosition);
   const rightAnswer = firstNum + hidenPosition * step;
   return [question, String(rightAnswer)];
 };
