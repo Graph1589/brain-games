@@ -7,9 +7,12 @@ const getQuestion = (firstNum, step, hidenPosition) => {
   let progression = '';
   for (let i = 0; i < progresLength; i += 1) {
     if (i === hidenPosition) {
-      progression = `${progression}... `;
+      progression = `${progression}...`;
     } else {
-      progression = `${progression}${String(firstNum + i * step)} `;
+      progression = `${progression}${String(firstNum + i * step)}`;
+    }
+    if (i < progresLength - 1) {
+      progression = `${progression} `;
     }
   }
   return progression;
