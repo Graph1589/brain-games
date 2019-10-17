@@ -1,11 +1,11 @@
 {
   "name": "bg-graph1589",
-  "version": "1.3.1",
+  "version": "1.4.3",
   "description": "educational project, brain games",
   "keywords": "brain-games",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "NODE_ENV=production babel src --out-dir dist --source-maps   inline",
+    "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
     "prepublishOnly": "npm run build"
   },
   "author": "Graph1589",
@@ -24,10 +24,10 @@
     "readline-sync": "^1.4.10"
   },
   "devDependencies": {
-    "@babel/cli": "^7.6.2",
-    "@babel/core": "^7.6.2",
-    "@babel/node": "^7.6.2",
-    "@babel/preset-env": "^7.6.2",
+    "@babel/cli": "^7.6.4",
+    "@babel/core": "^7.6.4",
+    "@babel/node": "^7.6.3",
+    "@babel/preset-env": "^7.6.3",
     "babel-eslint": "^10.0.3",
     "eslint": "^5.16.0",
     "eslint-config-airbnb-base": "^13.2.0",
