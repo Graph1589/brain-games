@@ -5,7 +5,7 @@ const max = 100;
 
 const isEven = number => number % 2 === 0;
 
-const brainEven = () => {
+const runEven = () => {
   const question = getRandomInteger(max);
   const rightAnswer = isEven(question) ? 'yes' : 'no';
   return [question, String(rightAnswer)];
@@ -14,5 +14,5 @@ const brainEven = () => {
 const description = 'Answer "yes" if number even, otherwise answer "no".';
 
 export default () => {
-  engine(brainEven, description);
+  engine(runEven, description);
 };

@@ -21,7 +21,7 @@ const getRightAnswer = (firstNumber, operator, secondNumber) => {
   return rightAnswer;
 };
 
-const brainCalc = () => {
+const runCalc = () => {
   const firstOperand = getRandomInteger(maxValue);
   const secondOperand = getRandomInteger(maxValue);
   const operator = operators[getRandomInteger(operators.length, 0)];
@@ -33,5 +33,5 @@ const brainCalc = () => {
 const description = 'What is the result of the expression?';
 
 export default () => {
-  engine(brainCalc, description);
+  engine(runCalc, description);
 };

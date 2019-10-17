@@ -16,7 +16,7 @@ const isPrime = (num) => {
   return (cdg === 1);
 };
 
-const brainPrime = () => {
+const runPrime = () => {
   const number = getRandomInteger(maxValueOfNumbers);
   const question = `${number}`;
   const rightAnswer = isPrime(number) ? 'yes' : 'no';
@@ -26,5 +26,5 @@ const brainPrime = () => {
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no"';
 
 export default () => {
-  engine(brainPrime, description);
+  engine(runPrime, description);
 };

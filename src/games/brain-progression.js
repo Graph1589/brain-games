@@ -15,7 +15,7 @@ const getProgression = (firstNum, step, hidenPosition) => {
   return progression;
 };
 
-const brainProgression = () => {
+const runProgression = () => {
   const firstNum = getRandomInteger(100);
   const step = getRandomInteger(20);
   const hidenPosition = getRandomInteger(progresLength);
@@ -27,5 +27,5 @@ const brainProgression = () => {
 const description = 'What number is missing in the progression?';
 
 export default () => {
-  engine(brainProgression, description);
+  engine(runProgression, description);
 };

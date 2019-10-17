@@ -14,7 +14,7 @@ const getGcd = (first, second) => {
   return gcd;
 };
 
-const brainGcd = () => {
+const runGcd = () => {
   const firstNumber = getRandomInteger(maxValueOfNumbers);
   const secondNumber = getRandomInteger(maxValueOfNumbers);
   const question = `${firstNumber} and ${secondNumber}`;
@@ -25,5 +25,5 @@ const brainGcd = () => {
 const description = 'Find the greatest common divisor of given numbers.';
 
 export default () => {
-  engine(brainGcd, description);
+  engine(runGcd, description);
 };
