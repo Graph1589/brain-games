@@ -1,2 +1,2 @@
 /* this function return random integer from 1 to maxValue */
-export default (maxValue, minValue = 1) => Math.floor(Math.random() * maxValue + minValue);
+export default (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;

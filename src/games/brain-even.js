@@ -2,11 +2,12 @@ import getRandomInteger from '../utilities/randomizer';
 import engine from '../game-engine';
 
 const max = 100;
+const min = 0;
 
 const isEven = number => number % 2 === 0;
 
 const runEven = () => {
-  const question = getRandomInteger(max);
+  const question = getRandomInteger(min, max);
   const rightAnswer = isEven(question) ? 'yes' : 'no';
   return [question, String(rightAnswer)];
 };

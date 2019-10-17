@@ -1,7 +1,8 @@
 import getRandomInteger from '../utilities/randomizer';
 import engine from '../game-engine';
 
-const maxValueOfNumbers = 50;
+const max = 50;
+const min = 1;
 
 const getGcd = (first, second) => {
   let gcd = 1;
@@ -15,8 +16,8 @@ const getGcd = (first, second) => {
 };
 
 const runGcd = () => {
-  const firstNumber = getRandomInteger(maxValueOfNumbers);
-  const secondNumber = getRandomInteger(maxValueOfNumbers);
+  const firstNumber = getRandomInteger(min, max);
+  const secondNumber = getRandomInteger(min, max);
   const question = `${firstNumber} and ${secondNumber}`;
   const rightAnswer = getGcd(firstNumber, secondNumber);
   return [question, String(rightAnswer)];

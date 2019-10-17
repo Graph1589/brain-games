@@ -1,7 +1,8 @@
 import getRandomInteger from '../utilities/randomizer';
 import engine from '../game-engine';
 
-const maxValueOfNumbers = 50;
+const max = 50;
+const min = 1;
 
 const isPrime = (num) => {
   let cdg = 0;
@@ -17,7 +18,7 @@ const isPrime = (num) => {
 };
 
 const runPrime = () => {
-  const number = getRandomInteger(maxValueOfNumbers);
+  const number = getRandomInteger(min, max);
   const question = `${number}`;
   const rightAnswer = isPrime(number) ? 'yes' : 'no';
   return [question, String(rightAnswer)];

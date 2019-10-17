@@ -2,7 +2,8 @@ import getRandomInteger from '../utilities/randomizer';
 import engine from '../game-engine';
 
 const operators = ['+', '-', '*'];
-const maxValue = 35;
+const max = 35;
+const min = 0;
 
 const getRightAnswer = (firstNumber, operator, secondNumber) => {
   let rightAnswer = null;
@@ -22,9 +23,9 @@ const getRightAnswer = (firstNumber, operator, secondNumber) => {
 };
 
 const runCalc = () => {
-  const firstOperand = getRandomInteger(maxValue);
-  const secondOperand = getRandomInteger(maxValue);
-  const operator = operators[getRandomInteger(operators.length, 0)];
+  const firstOperand = getRandomInteger(min, max);
+  const secondOperand = getRandomInteger(min, max);
+  const operator = operators[getRandomInteger(0, operators.length)];
   const question = `${firstOperand} ${operator} ${secondOperand}`;
   const rightAnswer = getRightAnswer(firstOperand, operator, secondOperand);
   return [question, String(rightAnswer)];

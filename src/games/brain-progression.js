@@ -16,9 +16,9 @@ const getQuestion = (firstNum, step, hidenPosition) => {
 };
 
 const runProgression = () => {
-  const firstNum = getRandomInteger(100);
-  const step = getRandomInteger(20);
-  const hidenPosition = getRandomInteger(progresLength);
+  const firstNum = getRandomInteger(1, 100);
+  const step = getRandomInteger(1, 20);
+  const hidenPosition = getRandomInteger(0, progresLength);
   const question = getQuestion(firstNum, step, hidenPosition);
   const rightAnswer = firstNum + hidenPosition * step;
   return [question, String(rightAnswer)];
