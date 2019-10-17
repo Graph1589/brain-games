@@ -8,7 +8,7 @@ const isEven = number => number % 2 === 0;
 const brainEven = () => {
   const question = getRandomInteger(max);
   const rightAnswer = isEven(question) ? 'yes' : 'no';
-  return [question, rightAnswer];
+  return [question, String(rightAnswer)];
 };
 
 const description = 'Answer "yes" if number even, otherwise answer "no".';

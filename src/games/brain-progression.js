@@ -21,7 +21,7 @@ const brainProgression = () => {
   const hidenPosition = getRandomInteger(progresLength);
   const question = getProgression(firstNum, step, hidenPosition);
   const rightAnswer = firstNum + hidenPosition * step;
-  return [question, rightAnswer];
+  return [question, String(rightAnswer)];
 };
 
 const description = 'What number is missing in the progression?';

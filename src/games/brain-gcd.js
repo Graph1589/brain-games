@@ -19,7 +19,7 @@ const brainGcd = () => {
   const secondNumber = getRandomInteger(maxValueOfNumbers);
   const question = `${firstNumber} and ${secondNumber}`;
   const rightAnswer = getGcd(firstNumber, secondNumber);
-  return [question, rightAnswer];
+  return [question, String(rightAnswer)];
 };
 
 const description = 'Find the greatest common divisor of given numbers.';

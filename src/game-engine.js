@@ -12,7 +12,7 @@ export default (play, description) => {
     const [question, rightAnswer] = play();
     console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your Answer: ');
-    if (String(rightAnswer) === userAnswer) {
+    if (rightAnswer === userAnswer) {
       console.log('Correct!');
     } else {
       console.log(`"${userAnswer}" is wrong answer ;(. Correct answer was "${rightAnswer}".`);

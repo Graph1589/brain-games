@@ -20,7 +20,7 @@ const brainPrime = () => {
   const number = getRandomInteger(maxValueOfNumbers);
   const question = `${number}`;
   const rightAnswer = isPrime(number) ? 'yes' : 'no';
-  return [question, rightAnswer];
+  return [question, String(rightAnswer)];
 };
 
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no"';

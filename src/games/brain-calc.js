@@ -27,7 +27,7 @@ const brainCalc = () => {
   const operator = operators[getRandomInteger(operators.length, 0)];
   const question = `${firstOperand} ${operator} ${secondOperand}`;
   const rightAnswer = getRightAnswer(firstOperand, operator, secondOperand);
-  return [question, rightAnswer];
+  return [question, String(rightAnswer)];
 };
 
 const description = 'What is the result of the expression?';
