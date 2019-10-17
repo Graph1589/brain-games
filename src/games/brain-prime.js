@@ -6,7 +6,7 @@ const maxValueOfNumbers = 50;
 const isPrime = (num) => {
   let cdg = 0;
   if (num === 1) {
-    return 'no';
+    return false;
   }
   for (let i = 1; i <= (num / 2); i += 1) {
     if (num % i === 0) {
