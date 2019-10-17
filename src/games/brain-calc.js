@@ -5,7 +5,7 @@ const operators = ['+', '-', '*'];
 const maxValue = 35;
 
 const getRightAnswer = (firstNumber, operator, secondNumber) => {
-  let rightAnswer = 0;
+  let rightAnswer = null;
   switch (operator) {
     case '+':
       rightAnswer = firstNumber + secondNumber;
