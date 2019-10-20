@@ -25,7 +25,7 @@ const getRightAnswer = (firstOperand, secondOperand, operator) => {
 const runCalc = () => {
   const firstOperand = getRandomInteger(min, max);
   const secondOperand = getRandomInteger(min, max);
-  const operator = operators[getRandomInteger(0, operators.length)];
+  const operator = operators[getRandomInteger(0, operators.length - 1)];
   const question = `${firstOperand} ${operator} ${secondOperand}`;
   const rightAnswer = getRightAnswer(firstOperand, secondOperand, operator);
   return [question, String(rightAnswer)];
