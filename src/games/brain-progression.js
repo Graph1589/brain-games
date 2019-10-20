@@ -24,7 +24,7 @@ const runProgression = () => {
   const hiddenElementPosition = getRandomInteger(0, progresLength);
   const question = getQuestion(firstNum, step, hiddenElementPosition);
   const rightAnswer = firstNum + hiddenElementPosition * step;
-  return [question, rightAnswer];
+  return [question, String(rightAnswer)];
 };
 
 const description = 'What number is missing in the progression?';

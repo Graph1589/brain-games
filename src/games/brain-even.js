@@ -9,7 +9,7 @@ const isEven = number => number % 2 === 0;
 const runEven = () => {
   const question = getRandomInteger(min, max);
   const rightAnswer = isEven(question) ? 'yes' : 'no';
-  return [question, String(rightAnswer)];
+  return [question, rightAnswer];
 };
 
 const description = 'Answer "yes" if number even, otherwise answer "no".';
