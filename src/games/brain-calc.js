@@ -5,17 +5,17 @@ const operators = ['+', '-', '*'];
 const max = 35;
 const min = 0;
 
-const getRightAnswer = (firstNumber, operator, secondNumber) => {
+const getRightAnswer = (firstOperand, secondOperand, operator) => {
   let rightAnswer = null;
   switch (operator) {
     case '+':
-      rightAnswer = firstNumber + secondNumber;
+      rightAnswer = firstOperand + secondOperand;
       break;
     case '-':
-      rightAnswer = firstNumber - secondNumber;
+      rightAnswer = firstOperand - secondOperand;
       break;
     case '*':
-      rightAnswer = firstNumber * secondNumber;
+      rightAnswer = firstOperand * secondOperand;
       break;
     default:
   }
@@ -27,7 +27,7 @@ const runCalc = () => {
   const secondOperand = getRandomInteger(min, max);
   const operator = operators[getRandomInteger(0, operators.length)];
   const question = `${firstOperand} ${operator} ${secondOperand}`;
-  const rightAnswer = getRightAnswer(firstOperand, operator, secondOperand);
+  const rightAnswer = getRightAnswer(firstOperand, secondOperand, operator);
   return [question, String(rightAnswer)];
 };
 
