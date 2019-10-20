@@ -6,7 +6,7 @@ const min = 0;
 
 const isEven = number => number % 2 === 0;
 
-const runEven = () => {
+const generateQuestion = () => {
   const question = getRandomInteger(min, max);
   const rightAnswer = isEven(question) ? 'yes' : 'no';
   return [question, rightAnswer];
@@ -15,5 +15,5 @@ const runEven = () => {
 const description = 'Answer "yes" if number even, otherwise answer "no".';
 
 export default () => {
-  engine(runEven, description);
+  engine(generateQuestion, description);
 };

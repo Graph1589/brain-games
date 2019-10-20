@@ -18,7 +18,7 @@ const getQuestion = (firstNum, step, hidenPosition) => {
   return progression;
 };
 
-const runProgression = () => {
+const generateQuestion = () => {
   const firstNum = getRandomInteger(1, 100);
   const step = getRandomInteger(1, 20);
   const hiddenElementPosition = getRandomInteger(0, progresLength);
@@ -30,5 +30,5 @@ const runProgression = () => {
 const description = 'What number is missing in the progression?';
 
 export default () => {
-  engine(runProgression, description);
+  engine(generateQuestion, description);
 };
