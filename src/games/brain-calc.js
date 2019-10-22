@@ -22,7 +22,7 @@ const getRightAnswer = (firstOperand, secondOperand, operator) => {
   return rightAnswer;
 };
 
-const generateQuestion = () => {
+const generateGameData = () => {
   const firstOperand = getRandomInteger(min, max);
   const secondOperand = getRandomInteger(min, max);
   const operator = operators[getRandomInteger(0, operators.length - 1)];
@@ -34,5 +34,5 @@ const generateQuestion = () => {
 const description = 'What is the result of the expression?';
 
 export default () => {
-  engine(generateQuestion, description);
+  engine(generateGameData, description);
 };

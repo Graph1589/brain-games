@@ -3,10 +3,10 @@ import engine from '../game-engine';
 
 const progresLength = 10;
 
-const getQuestion = (firstNum, step, hidenPosition) => {
+const getQuestion = (firstNum, step, hidenElementPosition) => {
   let progression = '';
   for (let i = 0; i < progresLength; i += 1) {
-    if (i === hidenPosition) {
+    if (i === hidenElementPosition) {
       progression = `${progression}...`;
     } else {
       progression = `${progression}${String(firstNum + i * step)}`;
@@ -18,10 +18,10 @@ const getQuestion = (firstNum, step, hidenPosition) => {
   return progression;
 };
 
-const generateQuestion = () => {
+const generateGameData = () => {
   const firstNum = getRandomInteger(1, 100);
   const step = getRandomInteger(1, 20);
-  const hiddenElementPosition = getRandomInteger(0, progresLength);
+  const hiddenElementPosition = getRandomInteger(0, progresLength - 1);
   const question = getQuestion(firstNum, step, hiddenElementPosition);
   const rightAnswer = firstNum + hiddenElementPosition * step;
   return [question, String(rightAnswer)];
@@ -30,5 +30,5 @@ const generateQuestion = () => {
 const description = 'What number is missing in the progression?';
 
 export default () => {
-  engine(generateQuestion, description);
+  engine(generateGameData, description);
 };

@@ -6,8 +6,8 @@ const min = 1;
 
 const getGcd = (first, second) => {
   let gcd = 1;
-  const maxNumber = first > second ? second : first;
-  for (let i = 1; i <= maxNumber; i += 1) {
+  const peak = first > second ? second : first;
+  for (let i = 1; i <= peak; i += 1) {
     if (first % i === 0 && second % i === 0) {
       gcd = i;
     }
@@ -15,16 +15,16 @@ const getGcd = (first, second) => {
   return gcd;
 };
 
-const generateQuestion = () => {
-  const firstNumber = getRandomInteger(min, max);
-  const secondNumber = getRandomInteger(min, max);
-  const question = `${firstNumber} and ${secondNumber}`;
-  const rightAnswer = getGcd(firstNumber, secondNumber);
+const generateGameData = () => {
+  const first = getRandomInteger(min, max);
+  const second = getRandomInteger(min, max);
+  const question = `${first} and ${second}`;
+  const rightAnswer = getGcd(first, second);
   return [question, String(rightAnswer)];
 };
 
 const description = 'Find the greatest common divisor of given numbers.';
 
 export default () => {
-  engine(generateQuestion, description);
+  engine(generateGameData, description);
 };
