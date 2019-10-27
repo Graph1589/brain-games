@@ -19,11 +19,11 @@ const getQuestion = (firstNum, step, hidenElementPosition) => {
 };
 
 const generateGameData = () => {
-  const firstNum = getRandomInteger(1, 100);
+  const first = getRandomInteger(1, 100);
   const step = getRandomInteger(1, 20);
   const hiddenElementPosition = getRandomInteger(0, progresLength - 1);
-  const question = getQuestion(firstNum, step, hiddenElementPosition);
-  const rightAnswer = firstNum + hiddenElementPosition * step;
+  const question = getQuestion(first, step, hiddenElementPosition);
+  const rightAnswer = first + hiddenElementPosition * step;
   return [question, String(rightAnswer)];
 };
 
